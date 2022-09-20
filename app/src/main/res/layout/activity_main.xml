@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAE2E2"
+    android:backgroundTint="#FFFFFF"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtCalc"
+        android:layout_width="104dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="16dp"
+        android:text="CALCULADORA"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etn_Valor1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="#000000"
+        android:ems="10"
+        android:hint="Ingrese un numero"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <EditText
+        android:id="@+id/etn_Valor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#000000"
+        android:ems="10"
+        android:hint="Ingrese un numero"
+        android:inputType="number"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etn_Valor1" />
+
+    <Button
+        android:id="@+id/Btn_Resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="#B55D24"
+        android:onClick="calcular"
+        android:text="Calcular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etn_Valor2" />
+
+    <TextView
+        android:id="@+id/txt_Resultado"
+        android:layout_width="105dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#64C647"
+        android:text="Resultado"
+        android:textColor="#63BC42"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Btn_Resultado" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="146dp"
+        android:layout_height="203dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <RadioButton
+            android:id="@+id/Rb_Sum"
+            android:layout_width="144dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="#67E11B"
+            android:text="Sumar"
+            android:textColor="#000000" />
+
+        <RadioButton
+            android:id="@+id/Rb_Rest"
+            android:layout_width="144dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="#CC1616"
+            android:text="Restar"
+            android:textColor="#000000" />
+
+        <RadioButton
+            android:id="@+id/Rb_Mult"
+            android:layout_width="146dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="#224FC1"
+            android:text="Multiplicar"
+            android:textColor="#000000" />
+
+        <RadioButton
+            android:id="@+id/Rb_Div"
+            android:layout_width="146dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="#ECC23B"
+            android:checked="false"
+            android:text="Division"
+            android:textColor="#040404" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="163dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="32dp"
+        android:text="Proceso a realizar:"
+        android:textAllCaps="true"
+        android:textColor="#151515"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCalc" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
