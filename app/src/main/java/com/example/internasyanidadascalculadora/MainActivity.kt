@@ -1,5 +1,6 @@
 package com.example.internasyanidadascalculadora
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.service.autofill.OnClickAction
@@ -91,5 +92,11 @@ class MainActivity : AppCompatActivity() {
         val sumarDos = miClaseInterna.sumarDo(3)
         println("El resultado es $sumarDos")
 
+    }
+
+    fun btnSiguiente(vista: View)
+    {
+     val VentanaSiguiente:Intent = Intent (applicationContext,ListViewApp::class.java)
+        startActivity(VentanaSiguiente)
     }
 }
