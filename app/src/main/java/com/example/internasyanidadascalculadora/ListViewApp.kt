@@ -23,24 +23,20 @@ class ListViewApp : AppCompatActivity() {
         lvLLenguajes=findViewById(R.id.lv_Lenguajes)
         tvSeleccion=findViewById(R.id.tv_Seleccion)
 
-        //crear un adaptador para los numeros creo
+        //crear un adaptador para que logre mostrar la vista 
 
         var adaptador:ArrayAdapter<String> = ArrayAdapter <String>(this,R.layout.list_items_claseprogramacion,Lenguajes)
             lvLLenguajes?.adapter=adaptador
 
-        lvLLenguajes?.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+        lvLLenguajes?.onItemClickListener = object : AdapterView.OnItemClickListener{
 
-            override fun onItemSelected(
+            override fun onItemClick(
                 parent: AdapterView<*>?,
                 viwe: View?,
                 position: Int,
                 id: Long
             ) {
                 tvSeleccion?.text="La posicion del lenguaje ${lvLLenguajes?.getItemAtPosition(position)} es ${posicion[position]}"
-            }
-
-            override fun onNothingSelected(p0: AdapterView<*>?) {
-                TODO("Not yet implemented")
             }
 
         }
